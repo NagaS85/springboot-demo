@@ -39,7 +39,7 @@ parameters {
 	stage('DEPLOY') {
 		steps {
 		withMaven{
-		  bat "java -jar target/spring-boot-ops.war"
+		  bat "java -jar target/demo.war"
 		} // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
            }
 			
