@@ -39,7 +39,7 @@ parameters {
 	stage('DEPLOY') {
 		steps {
 		withMaven{
-		  bat "java -jar target/demo-0.0.1-SNAPSHOT.jar"
+		  bat "java -jar target/demo-0.0.1-SNAPSHOT.jar &"
 		} // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
            }
 			
