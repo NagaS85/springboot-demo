@@ -33,7 +33,7 @@ parameters {
 			credentialsId: 'GIT_AUTH',
 			url: 'https://github.com/NagaS85/springboot-demo.git/'
 
-		    bat "ls -lat"
+		    
 		}
     }
 
