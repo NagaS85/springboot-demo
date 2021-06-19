@@ -17,13 +17,7 @@ parameters {
     }
 
     stages {
-	  stage('Parameters'){
-                steps {
-                    script {
-                    properties([
-                            parameters([
-
-	    
+	 
         stage('Hello') {
             steps {
                 echo 'Hello World'
