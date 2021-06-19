@@ -37,7 +37,7 @@ parameters {
 		}
     }
 
-        stage('Build') {
+        /*stage('Build') {
 		steps {
 		withMaven{
 		  bat "mvn clean package"
@@ -52,6 +52,6 @@ parameters {
 		} // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
            }
 			
-        }    
+        }  */  
 }
 }
