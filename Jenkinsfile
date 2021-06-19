@@ -27,6 +27,15 @@ parameters {
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
+	stage('Checkout external proj') {
+		steps {
+		    git branch: 'master',
+			credentialsId: 'GIT_AUTH',
+			url: 'https://github.com/NagaS85/springboot-demo.git/'
+
+		    bat "ls -lat"
+		}
+    }
 
         stage('Build') {
 		steps {
