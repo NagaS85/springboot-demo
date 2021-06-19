@@ -24,6 +24,7 @@ parameters {
         }
         stage('Example') {
             steps {
+		 echo "Values ${PERSON}  ${CHOICE}"
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
