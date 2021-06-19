@@ -48,15 +48,15 @@ parameters {
 		}
     }
 
-        /*stage('Build') {
+        stage('Build') {
 		steps {
 		withMaven{
-		  bat "mvn clean package"
+		  bat "mvn clean package -Dbuild.number=${BUILD_NUMBER}"
 		} // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
            }
 			
         }
-	stage('DEPLOY') {
+	/*stage('DEPLOY') {
 		steps {
 		withMaven{
 		  bat "mvn spring-boot:run"
