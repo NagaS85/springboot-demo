@@ -11,7 +11,7 @@ parameters {
 
         booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
 
-        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something',defaultValue: 'One')
 
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
@@ -29,10 +29,19 @@ parameters {
                 echo 'Hello World'
             }
         }
-        stage('Example') {
+        stage('Default Params') {
             steps {
-		 echo "Values ${PERSON}  ${CHOICE}"
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+		    echo "${BUILD_NUMBER}"
+		    echo "${BUILD_ID}"
+		    echo "${BUILD_DISPLAY_NAME}"
+		    echo "${JOB_NAME}"
+		    echo "${BUILD_TAG}"
+		    echo "${EXECUTOR_NUMBER}"
+		    echo "${NODE_NAME}"
+		    echo "${NODE_LABELS}"
+		    echo "${WORKSPACE}"
+		    echo "${JOB_URL }"
+		
             }
         }
 	stage('Checkout external proj') {
